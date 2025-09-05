@@ -30,7 +30,9 @@ async function bootstrap() {
   });
 
   SwaggerModule.setup('api/v2/api-docs', app, document);
-
+  app.use('', (req, res) => {
+    res.redirect('/api/v2/api-docs');
+  });
   app.enableCors({
     origin: true,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
