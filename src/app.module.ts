@@ -35,7 +35,7 @@ import { CommentsModule } from './comments/comments.module';
     port : Number(envVariables.DB_PORT),
     username : envVariables.DB_USERNAME,
     database : envVariables.DB_NAME,
-    password : envVariables.DB_PASSWORD,
+    password : String(envVariables.DB_PASSWORD),
     synchronize : true,
     autoLoadEntities : true
   }), AuthModule, UsersModule, ShortsModule, VideosModule, CommentsModule],
